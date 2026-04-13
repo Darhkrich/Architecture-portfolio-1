@@ -9,8 +9,7 @@
   
   /* Spacing & Layout */
   --max-width: 1400px;
-  --padding-mobile: 20px;
-  --padding-desktop: 80px;
+  --padding-side: clamp(20px, 5vw, 80px); /* Fluid padding instead of hardcoded mobile/desktop */
 }
 
 * {
