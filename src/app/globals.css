@@ -1,49 +1,52 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Architectural Color Palette */
+  --bg-color: #0f0f0f;      /* Deep Charcoal/Black */
+  --surface-color: #1a1a1a; /* Slightly lighter for cards */
+  --text-primary: #e0e0e0;  /* Off-white */
+  --text-secondary: #888888; /* Concrete Grey */
+  --accent-color: #c4a059;  /* Muted Bronze/Gold */
+  --line-color: #333333;    /* Blueprint lines */
+  
+  /* Spacing & Layout */
+  --max-width: 1400px;
+  --padding-mobile: 20px;
+  --padding-desktop: 80px;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean Sans-serif */
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+ul {
+  list-style: none;
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
 }

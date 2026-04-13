@@ -1,0 +1,60 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(1rem, 3vw, 2rem) var(--padding-side);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line-color);
+}
+
+.logo {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.links {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem); /* Shrinks gap on mobile */
+  align-items: center;
+}
+
+.linkItem {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.linkItem:hover {
+  color: var(--accent-color);
+}
+
+.contactBtn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.contactBtn:hover {
+  opacity: 0.7;
+}
+
+/* Hide non-essential links on extremely small screens */
+@media (max-width: 480px) {
+  .hideOnMobile {
+    display: none;
+  }
+}
