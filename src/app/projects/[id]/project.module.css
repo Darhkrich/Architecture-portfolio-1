@@ -7,8 +7,15 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .header {
@@ -55,7 +62,8 @@
 /* --- Details Grid --- */
 .detailsGrid {
   display: grid;
-  grid-template-columns: 1fr; /* Mobile first */
+  grid-template-columns: 1fr;
+  /* Mobile first */
   gap: clamp(40px, 8vw, 80px);
   padding: clamp(60px, 10vw, 100px) var(--padding-side);
   border-bottom: 1px solid var(--line-color);
@@ -63,7 +71,8 @@
 
 @media (min-width: 1024px) {
   .detailsGrid {
-    grid-template-columns: 1fr 2fr; /* 1/3 for specs, 2/3 for text */
+    grid-template-columns: 1fr 2fr;
+    /* 1/3 for specs, 2/3 for text */
   }
 }
 
@@ -78,6 +87,7 @@
     gap: 40px;
     flex-wrap: wrap;
   }
+
   .specItem {
     flex: 1;
   }
@@ -131,7 +141,8 @@
 
 .galleryGrid {
   display: grid;
-  grid-template-columns: 1fr; /* Mobile first */
+  grid-template-columns: 1fr;
+  /* Mobile first */
   gap: clamp(20px, 4vw, 40px);
 }
 
